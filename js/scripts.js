@@ -1,8 +1,8 @@
  
 //  var typeOfErand =[];
 
-
-
+//  var customErand = document.getElementById("typeErrand").val();
+// var customTime = document.getElementById("Time").val();
  
  function errand(book,data,proposal){
      this.book=book;
@@ -49,16 +49,19 @@
      
  }
 
-
-
- $(document).ready(function() {
-    $("#submit").submit(function(event) {
+$(document).ready(function() {
+    $("#submit").click(function() {
         event.preventDefault();
-
-        var customErand = $("typeErrand").val();
-        var customTime = $("Time").val();
+        var customErrand = $("#vary option:selected").val();
+        var customTime= $("#duration option:selected").val();
+        var newItem =new errand(customErrand,customTime);
         
-    $('#typeErrand').slideUp();
-    $('#Time').slideUp();
+        var newRow = '<tr><th scope="row">'  + '</th><td id="errand">' + $("#vary option:selected").text()  + '</td><td id="duration">' + $("#duration option:selected").text() + '</td></tr>'
+
+      $("#result").append(newRow);
+
   });
 });
+
+
+ 

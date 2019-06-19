@@ -29,10 +29,7 @@
                         </select>
            </div>
              <br>
-             <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-           </div>
+          
            <div id="Time">
                 <select class="custom-select" id="duration">
                         <option selected>Duration</option>
@@ -42,10 +39,24 @@
                         <option value="3">1 week</option>
                         <option value="3">2 week</option>
                 </select>
-                <button id="submit" onclick="errand" > Submit</button>
+                <br>
+                <button id="submit" onclick="errand()" > Submit</button>
            </div>
+           <br>
+           <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+       </div>
+       <table class="table">
+        <thead id="result">
+          <tr>
+            <th scope="row"></th>
+            <td id="Time"></td>
+            <td id="Errand"></td>
+          </tr>
+        </thead>
+      </table>
 
-           
     </div>
 </body>
 </html>
